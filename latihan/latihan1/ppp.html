@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title>Data Diri</title>
+    <style>
+        /* ===== ANIMASI BACKGROUND ===== */
+        body {
+            /* warna gradasi yang bergerak pelan */
+            background: linear-gradient(45deg, #ffcccc, #ccffff, #ccffcc);
+            background-size: 300% 300%;
+            animation: gerakWarna 10s infinite alternate;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes gerakWarna {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* ===== JUDUL ATAS ===== */
+        h1 {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        /* ===== KOTAK UTAMA ===== */
+        table {
+            width: 90%;
+            margin: auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            padding: 20px;
+        }
+
+        /* ===== FOTO ===== */
+        img {
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05); /* biar pas diarahkan mouse, foto agak gede dikit */
+        }
+    </style>
+</head>
+
+<body>
+    <h1><u>TENTANG SAYA</u></h1>
+    <hr>
+
+    <table>
+        <tr>
+            <td valign="top" width="60%">
+                <h2><u>DESKRIPSI</u></h2>
+                <p>Email : mrafyfauzan@gmail.com</p>
+                <p>Instagram : @mrffznn</p>
+
+                <h2><u>BIODATA</u></h2>
+                <p>Nama : Mochamad Rafy Fauzan</p>
+                <p>Alamat : Jln Gegerkalong Hilir No 107 RT 06 RW 01, Kelurahan Sukarasa, Kecamatan Sukasari</p>
+                <p>Email : mrafyfauzan@gmail.com</p>
+            </td>
+
+            <td align="center" valign="top" width="40%">
+                <h2><u>FOTO</u></h2>
+                <img src="pic1.jpg" alt="foto saya" width="250" height="300">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

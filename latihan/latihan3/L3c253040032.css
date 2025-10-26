@@ -1,0 +1,49 @@
+
+body{
+    background-color: aqua;
+}
+ h1 { color: darkblue;
+    font-size:60px;
+    font-family: 'Comic Sans MS';
+    text-align: center;
+ }
+    h3 {
+            color: black;
+        }
+
+        
+        h3 a:link,
+        h3 a:visited {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+
+        }
+        h3 a:hover{
+            color: red;
+        }
+
+ 
+ h4{
+    font-style: italic;
+    text-align: right;
+ }
+ 
+p.p1{ 
+    color: orange;
+    text-align: center;
+}
+p.p2{
+    text-align: right;
+    
+}
+
+p a:link,
+p a:visited{
+    text-decoration: none;
+    font-weight: bold;
+}
+p a:hover{
+    background-color: blue;
+            color: white;
+        }

@@ -68,3 +68,104 @@ h1 {
 .clear {
     clear: both;
 }
+
+
+
+/* overlay */
+.overlay {
+    position: fixed;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0);
+    z-index: 9999;
+    transition: .8s;
+    text-align: center;
+    padding: 0;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+     bottom: 0;
+     right: 0;
+     background-color: rgba(0,0,0,0.8);
+}
+
+.overlay img{
+    max-height: 100%;
+    box-shadow: 2px 2px 7px rgba(0,0,0,.5);
+}
+
+.overlay:target img {
+    animation: zoomDanFade;
+}
+
+/* navigasi */
+.next,
+.prev {
+    width: 57px;
+    height: 93px;
+    background-image: url(../galery/img/thumbs/g22.jpg);
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    margin-left: 50px;
+}
+
+.next {
+    right: 10%;
+    background-image: url(../galery/img/thumbs/g333.png);
+}
+
+.prev {
+    left: 1%;
+    background-image: url(../galery/img/thumbs/g444.png);
+}
+
+
+/* animasi */
+@keyframes zoomDanFade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.overlay .close {
+    position: absolute;
+    top: 30px;
+    left:50%;
+    margin-left: 30%;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: 1px solid white;
+    line-height: 14px;
+    padding: 5px;
+    opacity: 0;
+}
+
+@keyframes slideDownFade {
+    0% {
+         opacity: 0;
+    transform translateY(-20px);
+}
+100% {
+    opacity: 1;
+    transform translateY(0);
+}
+}
+
+.overlay:target .close {
+    animation: slideDownFade .5s .5s forwards;
+}
+
